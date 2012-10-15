@@ -1,3 +1,4 @@
+#!/usr/bin/python2
 from math import *
 import random
 import operator
@@ -49,7 +50,7 @@ def drawCirc (surf, p):
     if (gear * radius > 1):
         pygame.draw.circle (surf, color, np, gear * radius)
     else:
-        surf.set_at (np, color)
+        surf.set_at (map (int, np), color)
 def orts_richt ((angle, offset)):
     return ((sin (angle) * offset, cos (angle) * offset),
            (sin (angle - pi/2), cos (angle - pi/2)))
